@@ -1,0 +1,1 @@
+execute as @p[scores={Deaths=1..}] run function deathcoords:send
