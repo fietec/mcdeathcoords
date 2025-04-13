@@ -1,7 +1,7 @@
-execute as @s store result score @s DXCoord run data get entity @s Pos[0] 1
-execute as @s store result score @s DYCoord run data get entity @s Pos[1] 1
-execute as @s store result score @s DZCoord run data get entity @s Pos[2] 1
-execute as @s store result score @s DDimension run data get entity @s Dimension
+execute as @s store result score @s DXCoord run data get entity @s LastDeathLocation.pos[0] 1
+execute as @s store result score @s DYCoord run data get entity @s LastDeathLocation.pos[1] 1 
+execute as @s store result score @s DZCoord run data get entity @s LastDeathLocation.pos[2] 1 
+execute as @s store result score @s DDimension run data get entity @s LastDeathLocation.dimension
 execute as @s run execute if score @s DDimension matches 19 run tellraw @s {"text":"","extra":[{"text":"You died at: ","color":"white"},{"text":"[", "color":"dark_gray"},{"text":"x: ","color":"gray"},{"score":{"name":"@s","objective":"DXCoord"}},{"text":", y: ","color":"gray"},{"score":{"name":"@s","objective":"DYCoord"}},{"text":", z: ","color":"gray"},{"score":{"name":"@s","objective":"DZCoord"}},{"text":"]","color":"dark_gray"},{"text":" in the Overworld","color":"white"}]}
 execute as @s run execute if score @s DDimension matches 20 run tellraw @s {"text":"","extra":[{"text":"You died at: ","color":"white"},{"text":"[", "color":"dark_gray"},{"text":"x: ","color":"gray"},{"score":{"name":"@s","objective":"DXCoord"}},{"text":", y: ","color":"gray"},{"score":{"name":"@s","objective":"DYCoord"}},{"text":", z: ","color":"gray"},{"score":{"name":"@s","objective":"DZCoord"}},{"text":"]","color":"dark_gray"},{"text":" in the Nether","color":"white"}]}
 execute as @s run execute if score @s DDimension matches 17 run tellraw @s {"text":"","extra":[{"text":"You died at: ","color":"white"},{"text":"[", "color":"dark_gray"},{"text":"x: ","color":"gray"},{"score":{"name":"@s","objective":"DXCoord"}},{"text":", y: ","color":"gray"},{"score":{"name":"@s","objective":"DYCoord"}},{"text":", z: ","color":"gray"},{"score":{"name":"@s","objective":"DZCoord"}},{"text":"]","color":"dark_gray"},{"text":" in the End","color":"white"}]}
